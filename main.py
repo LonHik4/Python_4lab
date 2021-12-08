@@ -7,7 +7,8 @@ import numpy as np
 
 
 def calculate(*data):
-    return sum(data)
+    a=list(data)
+    return sum(a)
 
 
 df = pd.read_csv("data.csv", sep=",", encoding='windows-1251')
@@ -25,7 +26,7 @@ if __name__=="__main__":
         print(time() - time_1)
     print(lst)
 
-    fig=plt.figure(figsize=(30, 5))
+    fig=plt.figure(figsize=(10, 10))
     plt.ylabel('y')
     plt.xlabel('x')
     plt.title('y=sinc(x)')
