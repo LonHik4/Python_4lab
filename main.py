@@ -7,6 +7,7 @@ import numpy as np
 
 
 def calculate(*data):
+    """сумма всех активных случаев"""
     a=list(data)
     return sum(a)
 
@@ -16,6 +17,7 @@ print(df["јктивные случаи"].tolist())
 calculate()
 
 if __name__=="__main__":
+    """находим врем€ работы при разном количестве процессов и выводим массив из времен"""
     time_1 = time()
     lst=[]
     for i in range(1, 5):
@@ -25,7 +27,7 @@ if __name__=="__main__":
         lst.append(a)
         print(time() - time_1)
     print(lst)
-
+    """—оздаем точечную диаграмму использу€ врем€ """
     fig=plt.figure(figsize=(10, 10))
     plt.ylabel('y')
     plt.xlabel('x')
